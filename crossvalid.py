@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 
-def LinearRegCostFunction(theta,X,y,reg_param, **kwargs):
+def LinearRegCostFunction(theta,X,y,reg_param=0.0, **kwargs):
 
     m,n = X.shape
     theta = theta.reshape([n, 1])
@@ -22,7 +22,7 @@ def LinearRegCostFunction(theta,X,y,reg_param, **kwargs):
 
     return J
 
-def gradientCostFunction(theta,X,y,reg_param):
+def gradientCostFunction(theta,X,y,reg_param=0.0):
 
     m,n = X.shape
     theta=theta.reshape([n,1])
@@ -37,7 +37,7 @@ def gradientCostFunction(theta,X,y,reg_param):
 
     return grad.flatten()
 
-def trainLinearReg(X,y,reg_param):
+def trainLinearReg(X,y,reg_param=0.0):
 
     m,n = X.shape
     #theta_ini=np.random.uniform(0, 1, [n, 1]).reshape([n,1])
@@ -51,7 +51,7 @@ def trainLinearReg(X,y,reg_param):
 
 # implement learning curves function
 
-def learningcurves(X, y, Xval, yval, reg_param):
+def learningcurves(X, y, Xval, yval, reg_param=0.0):
     m = X.shape[0]
     mval=Xval.shape[0]
     train_error = []
@@ -73,7 +73,7 @@ def normalise(X,object,options):
     scaler = object(options)
     scaler.fit_transform(X)
 
-def validationCurve(X,Y,Xval,yval,reg_param):
+def validationCurve(X,Y,Xval,yval,reg_param=0.0):
     l=len(reg_param)
     m,n = X.shape
     train_error = []
