@@ -1,6 +1,8 @@
 """
 This code shows how to analyse predictions using 
-learning curves to improve learning performance.
+learning curves to find the optimal tuning parameters (e.g. regularization parameter).
+It also shows how to create new polynomial features from
+the training data set to improve the performance of the predictor. 
 Auth : Zak Moktadir
 """
 
