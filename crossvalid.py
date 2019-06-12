@@ -1,3 +1,9 @@
+"""
+This code shows how to analyse predictions using 
+learning curves to improve learning performance.
+Auth : Zak Moktadir
+"""
+
 import matplotlib
 import matplotlib.image as mpimg
 matplotlib.use('TkAgg')
